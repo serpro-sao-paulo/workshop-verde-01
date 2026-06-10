@@ -168,7 +168,7 @@ A `legacy-docs/` está **desatualizada de propósito**: descreve chamadas e regr
 | Easter eggs encontrados       | 3 / 3   |
 | Termos no glossário           | 52      |
 | Mistérios catalogados         | 33       |
-| Tempo total gasto             | \_\_\_ horas |
+| Tempo total gasto             | 1h30min |
 
 ---
 
@@ -188,18 +188,18 @@ Comecem pela **constituição** fixando "código legado é a fonte da verdade, n
 
 ### Aprovação da Equipe
 
-- **Reviewed by:** Gilberto_ (preencher)
-- **Date:** 10/06/2026_
-- **Confidence:** ☐ high ☐ medium ☐ low
+- **Reviewed by:** Gilberto
+- **Date:** 10/06/2026
+- **Confidence:** ☐ high ☑ medium ☐ low
 
 ---
 
 ## Definição de Pronto deste relatório
 
-- [ ] Todas as seções acima preenchidas (sem placeholders).
-- [ ] Pelo menos 5 regras críticas listadas em §3.1, cada uma referenciando uma `BR-XXX` do catálogo.
-- [ ] Decisões de migrar/descartar/evoluir em §5 cobrem as 8+ funcionalidades principais.
-- [ ] Métricas de §6 conferem com os outros artefatos (glossary.md, business-rules-catalog.md, mysteries-found.md).
+- [x] Todas as seções acima preenchidas (sem placeholders).
+- [x] Pelo menos 5 regras críticas listadas em §3.1, cada uma referenciando uma `BR-XXX` do catálogo.
+- [x] Decisões de migrar/descartar/evoluir em §5 cobrem as 8+ funcionalidades principais.
+- [x] Métricas de §6 conferem com os outros artefatos (glossary.md, business-rules-catalog.md, mysteries-found.md).
 
 — Paula
 

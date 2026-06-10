@@ -41,36 +41,41 @@ Prompt útil no Copilot Chat (cole o conteúdo de 2–3 arquivos `.NSN` no chat 
 
 | #   | Termo | Expansão | Programa | Contexto |
 | --- | ----- | -------- | -------- | -------- |
-| 1   |       |          |          |          |
-| 2   |       |          |          |          |
-| 3   |       |          |          |          |
-| 4   |       |          |          |          |
-| 5   |       |          |          |          |
-| 6   |       |          |          |          |
-| 7   |       |          |          |          |
-| 8   |       |          |          |          |
-| 9   |       |          |          |          |
-| 10  |       |          |          |          |
-| 11  |       |          |          |          |
-| 12  |       |          |          |          |
-| 13  |       |          |          |          |
-| 14  |       |          |          |          |
-| 15  |       |          |          |          |
-| 16  |       |          |          |          |
-| 17  |       |          |          |          |
-| 18  |       |          |          |          |
-| 19  |       |          |          |          |
-| 20  |       |          |          |          |
-| 21  |       |          |          |          |
-| 22  |       |          |          |          |
-| 23  |       |          |          |          |
-| 24  |       |          |          |          |
-| 25  |       |          |          |          |
-| 26  |       |          |          |          |
-| 27  |       |          |          |          |
-| 28  |       |          |          |          |
-| 29  |       |          |          |          |
-| 30  |       |          |          |          |
+| 1   | DSCT | Desconto | CALCDSCT.NSN | Campo TIPO-DSCT e fluxo de cálculo de descontos; confirmado por constantes J/P/I/S/A. |
+| 2   | BENF | Beneficiário | CALCBENF.NSN, CONSBENF.NSN | Prefixo recorrente em consultas e cálculo de benefício; forma abreviada de beneficiário. |
+| 3   | PGTO | Pagamento | CALCBENF.NSN, BATCHPGT.NSN, RELPGT.NSN | Código de tipo de pagamento N/D/T e status G/P/C/D/E. |
+| 4   | COMP | Competência | CALCBENF.NSN, RELPGT.NSN | Competência no formato AAAAMM para cálculo e relatórios. |
+| 5   | OPER | Operação | CADBENEF.NSN, CADPROG.NSN | Chaves de operação I/A/C para inclusão, alteração e consulta/cadastro. |
+| 6   | UF | Unidade da Federação | VALBENEF.NSN, CONSBENF.NSN | Siglas estaduais (AC, AL, PE etc.) usadas em validação e impressão de município/UF. |
+| 7   | NIS | Número de Identificação Social | CONSBENF.NSN, VALELEG.NSN | Tipo de busca C=CPF N=NIS; também em motivo de inelegibilidade (NIS não cadastrado). |
+| 8   | CPF | Cadastro de Pessoas Físicas | CONSBENF.NSN, VALBENEF.NSN, VALDOCS.NSN | Máscara e validação de dígito verificador do documento. |
+| 9   | RG | Registro Geral | VALDOCS.NSN | Validação de formato de RG com mensagens de erro dedicadas. |
+| 10  | CNAB | Centro Nacional de Automação Bancária (layout de arquivo) | BATCHCON.NSN | Conciliação de retorno bancário com tipo de registro e códigos de ocorrência. |
+| 11  | CO | Conciliação | BATCHCON.NSN, RELAUDIT.NSN, CADDEPEND.NSN | Código de ação de auditoria CO=CONCILIACAO; também aparece em parentesco CO=CONJUGE. |
+| 12  | DV | Divergência | BATCHCON.NSN, RELAUDIT.NSN | Código de auditoria DV para divergências de conciliação. |
+| 13  | STS | Status | BATCHREL.NSN | Vetor #NOME-STS traduz G/P/C/D/E em descrições de status. |
+| 14  | REG | Região | BATCHREL.NSN, CALCBENF.NSN | Tabela de nome de região e fator regional de cálculo (#TAB-REG). |
+| 15  | VLR | Valor | CONSBENF.NSN, RELPGT.NSN, CALCBENF.NSN | Campos VLR-BRUTO, VLR-DESCONTO e VLR-LIQUIDO em cálculo e relatório. |
+| 16  | MSG | Mensagem | CADBENEF.NSN, VALBENEF.NSN, VALDOCS.NSN | Variáveis #MSG/#MSG-ERRO armazenam mensagens de validação. |
+| 17  | QTD | Quantidade | VALBENEF.NSN, VALDOCS.NSN, VALELEG.NSN | Contadores de erros e motivos (#QTD-ERROS, #QTD-MOT). |
+| 18  | MOT | Motivo | VALELEG.NSN | Array #MOTIVO recebe causas de inelegibilidade. |
+| 19  | ELEG | Elegibilidade | VALELEG.NSN | Código de elegibilidade (#COD-ELEG) e validações associadas. |
+| 20  | DOCS | Documentos | VALDOCS.NSN, VALELEG.NSN | Validação documental e indicador #DOCS-OK para regra de elegibilidade. |
+| 21  | IPCA | Índice Nacional de Preços ao Consumidor Amplo | CALCCORR.NSN | Série mensal #IPCA-ANO (JAN..DEZ) para correção retroativa. |
+| 22  | IND | Indicador | CALCCORR.NSN | Campo IND-CORRIGIDO marcado com S para pagamentos já corrigidos. |
+| 23  | DT | Data | RELAUDIT.NSN | Filtros e cabeçalho de período com #DT-INI e #DT-FIM. |
+| 24  | HR | Hora | RELAUDIT.NSN | Campo #HR-FORMAT exibido no relatório de trilha de auditoria. |
+| 25  | ACAO | Ação | RELAUDIT.NSN | Códigos IN/AL/CO/CN/DV traduzidos para descrição textual. |
+| 26  | FI | Filho | CADDEPEND.NSN | Código de parentesco FI=FILHO. |
+| 27  | IR | Irmão | CADDEPEND.NSN | Código de parentesco IR=IRMAO. |
+| 28  | OU | Outro | CADDEPEND.NSN | Código de parentesco OU aceito na validação de dependente. |
+| 29  | PROG | Programa | CADPROG.NSN, VALELEG.NSN | STATUS-PROG e validações de atividade do programa social. |
+| 30  | PREF-ESP | Prefixo especial | VALDOCS.NSN | Tabela #PREF-ESP com códigos de prefixo de RG considerados especiais. |
+| 31  | DIAS-MES | Dias do mês | VALBENEF.NSN | Ajuste de fevereiro para 29 dias (ano bissexto). |
+| 32  | TIPO-PGTO | Tipo de pagamento | CALCBENF.NSN, RELPGT.NSN | Domínio N=normal, D=décimo, T=terceiro. |
+| 33  | PE | Periodic Group (Adabas) | [a validar em DDM] | Abreviação críptica comum em Adabas; incluir para validação cruzando arquivos .ddm. |
+| 34  | MU | Multiple Value (Adabas) | [a validar em DDM] | Abreviação críptica comum em Adabas; incluir para validação cruzando arquivos .ddm. |
+| 35  | CTC | [hipótese] Centro de Tratamento/Controle de Conciliação | [a confirmar no legado] | Termo solicitado para rastreio; não apareceu explicitamente nos comentários/constantes dos 15 .NSN. |
 
 > Adicione mais linhas conforme necessário. Não se limite a 30!
 

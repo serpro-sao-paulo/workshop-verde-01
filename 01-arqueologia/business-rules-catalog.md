@@ -64,7 +64,6 @@ O que NÃO conta: paginação de relatório, formatação de saída, manipulaç�
 
 > Adicione mais linhas conforme necessário. Lembre-se: existem **10 regras escondidas** no código!
 
-<<<<<<< HEAD
 ## Regras de CADBENEF.NSN
 
 > Extração sistemática por `@archaeologist-agent` em 2026-06-10 (primeira passada).
@@ -139,7 +138,7 @@ O que NÃO conta: paginação de relatório, formatação de saída, manipulaç�
 <!-- mystery: SEM VALIDAÇÃO DE NIS REAL — regra 14 só checa NIS ≠ 0; não invoca o subprograma VALNISN (citado no README e RN-001) para validar o dígito do NIS. -->
 
 > **Achado de maior impacto do Estágio 1 até aqui:** a cadeia **CADBENEF → VALELEG → BATCHPGT** revela duas regras de altíssimo risco operando juntas e sem documentação clara: (1) o **bypass da região 99** (fraude de elegibilidade) e (2) a **suspensão automática de beneficiários > 75 anos** via status 'S'. Ambas devem entrar no `mysteries-found.md` com prioridade máxima e ser questões abertas obrigatórias para o Estágio 2.
-=======
+
 ## Regras de BATCHPGT.NSN
 
 > Extração sistemática por `@archaeologist-agent` em 2026-06-10 (primeira passada).
@@ -264,7 +263,6 @@ O que NÃO conta: paginação de relatório, formatação de saída, manipulaç�
 <!-- mystery: DEFLAÇÃO DESCARTADA — a regra 7 só grava correção quando a diferença é positiva. Em meses de IPCA negativo (deflação, ex.: alguns meses de 2017) o acumulado pode reduzir o valor, mas o programa nunca registra valor menor. Não está claro se isso é regra de negócio (benefício não cai) ou bug. -->
 
 > **Observação de cobertura temporal:** a tabela IPCA está congelada em 2010-2012 (3 anos efetivamente carregados de 10 posições declaradas), apesar do comentário "ULTIMA CARGA: 2014". Correções para competências de 2013 em diante retornam índice 1.0 (nenhuma correção) sem erro. Risco **ALTO** de correções silenciosamente zeradas.
->>>>>>> 59b9ab08fc85bbc82e9d214971761b4d088699bf
 
 ## Exemplo de linha bem preenchida
 
